@@ -1,31 +1,52 @@
-// Online C++ compiler to run C++ program online
-#include <iostream>
+// // Online C++ compiler to run C++ program online
+// #include <iostream>
 
-int main() {
-    char s[80];
-    system("cls");
+// int main() {
+//     char s[80];
+//     system("cls");
  
-        // Write C++ code here
-    std::cout<<"Enter String: ";
-    std::cin.get(s,80);
-    std::cout<<s<<std::endl;
-    char *ptr=s;
-    std::cout<<*ptr<<std::endl;
-    while(*ptr!='\0')
-    {
-        // if(*ptr!=' ')
-        // {
-        //     *ptr-=32;
-        // }
-        if (*ptr >= 'a' && *ptr <= 'z') { 
-            *ptr -= 32; // Convert lowercase to uppercase
-        } else if (*ptr >= 'A' && *ptr <= 'Z') { 
-            *ptr += 32; // Convert uppercase to lowercase
-        }
-        ptr++; 
+//         // Write C++ code here
+//     std::cout<<"Enter String: ";
+//     std::cin.get(s,80);
+//     std::cout<<s<<std::endl;
+//     char *ptr=s;
+//     std::cout<<*ptr<<std::endl;
+//     while(*ptr!='\0')
+//     {
+//         // if(*ptr!=' ')
+//         // {
+//         //     *ptr-=32;
+//         // }
+//         if (*ptr >= 'a' && *ptr <= 'z') { 
+//             *ptr -= 32; // Convert lowercase to uppercase
+//         } else if (*ptr >= 'A' && *ptr <= 'Z') { 
+//             *ptr += 32; // Convert uppercase to lowercase
+//         }
+//         ptr++; 
        
         
-    }
-    std::cout<<s;
-    return 0;
+//     }
+//     std::cout<<s;
+//     return 0;
+// }
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    char s;
+    cout <<" enter vhar ;"<<endl;
+    cin>> s;
+    char* ptr =&s;
+    
+    while (*ptr!=0){
+        if(*ptr>='a'&& *ptr<='z'){
+            *ptr=*ptr-32;
+        }else if (*ptr>='A'&& *ptr<='Z' ){
+            *ptr = *ptr+32;
+        }
+        ptr++;
+    }cout<< s;
+
+return 0 ;
 }
